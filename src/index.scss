@@ -20,8 +20,8 @@ button {
 body {
     overflow-x: hidden;
     background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	transform: translate3d(0, 0, 0);
+    background-size: 400% 400%;
+    transform: translate3d(0, 0, 0);
 }
 body.no-scroll {
     overflow-y: hidden;
@@ -66,8 +66,8 @@ a {
         flex-wrap: wrap;
         justify-content: space-between;
         row-gap: 40px;
-        &:after{
-            content: '';
+        &:after {
+            content: "";
             flex: 0 0 210px;
         }
     }
@@ -135,7 +135,7 @@ a {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 600px) {
     .titleWrapper {
         flex-direction: column;
         row-gap: 20px;
@@ -147,8 +147,8 @@ a {
     .items {
         flex-direction: column;
         align-items: center;
-        &:after{
-            content: '';
+        &:after {
+            content: "";
             display: none;
         }
     }
