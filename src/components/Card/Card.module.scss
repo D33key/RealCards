@@ -61,10 +61,16 @@
 
 @media screen and (max-width: 600px) {
     .card{
-        max-width: 100%;
+        min-width: 100%;
         .preview, .title{
             text-align: center;
-            align-self: center;
+            align-self: center;           
+        }
+        .choiceWrapper{
+            gap: 10px;
+            .favorite{
+                margin-left: auto;
+            }
         }
     }
 }

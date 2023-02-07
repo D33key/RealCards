@@ -6,6 +6,10 @@
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
 }
+
+html, body {
+    overflow-x: hidden;
+}
 li {
     list-style-type: none;
 }
@@ -17,8 +21,7 @@ button {
     background-color: transparent;
     cursor: pointer;
 }
-body {
-    overflow-x: hidden;
+body {    
     background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     transform: translate3d(0, 0, 0);
