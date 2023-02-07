@@ -1,0 +1,106 @@
+.overlay {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: 0.3s ease;
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        & .drawer {
+            transform: translateX(0);
+        }
+    }
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        position: absolute;
+        max-width: 420px;
+        min-width: 385px;
+        height: 100%;
+        right: 0;
+        background: #ffffff;
+        box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: 0.3s ease;
+        .items {
+            overflow: auto;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            padding-bottom: 30px;
+        }
+        .cartItem {
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 325px;
+            background: #ffffff;
+            border: 1px solid #f3f3f3;
+            border-radius: 20px;
+            overflow: hidden;
+            .cartInfo {
+                font-size: 0.8rem;
+            }
+            img {
+                width: 50px;
+            }
+            button {
+                opacity: 0.5;
+                transition: 0.2s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        ul {
+            margin-top: auto;
+            div {
+                transform: translateY(-3px);
+                width: 50%;
+                border-bottom: 1px dashed #dfdfdf;
+            }
+            li {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .confirm {
+            position: relative;
+            margin-top: 24px;
+            padding: 18px 0;
+            background: #9dd558;
+            border-radius: 18px;
+            color: #ffffff;
+            transition: 0.3s ease;
+            &:after {
+                content: "";
+                width: 16px;
+                height: 14px;
+                position: absolute;
+                right: 10%;
+                top: 50%;
+                transform: translateY(-50%);
+                background-image: url(./assets/confirmArrow.svg);
+                transition: 0.3s ease;
+            }
+            &:hover {
+                background: #9bdc4c;
+                &:after {
+                    right: 8%;
+                }
+            }
+        }
+    }
+}

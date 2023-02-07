@@ -1,0 +1,55 @@
+.emptyWrapper {
+    min-width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &.draw{
+        min-height: 100vh;
+    }
+    .emptyImg {
+        width: 120px;
+    }
+    .text {
+        max-width: 285px;
+    }
+    .cancel {
+        max-width: 100%;
+        min-width: 250px;
+        position: relative;
+        margin-top: 24px;
+        padding: 18px 0;
+        background: #9dd558;
+        border-radius: 18px;
+        color: #ffffff;
+        transition: 0.3s ease;
+        &:after {
+            content: "";
+            width: 16px;
+            height: 14px;
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            background-image: url(./assets/confirmArrow.svg);
+            transition: 0.3s ease;
+        }
+        &:hover {
+            background: #9bdc4c;
+            &:after {
+                left: 8%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .emptyWrapper{
+        min-height: 50vh;
+        &.draw{
+            min-height: 100vh;
+        }
+    }
+}

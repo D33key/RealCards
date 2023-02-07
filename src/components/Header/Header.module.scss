@@ -1,0 +1,59 @@
+.header {
+    position: relative;
+    padding: 40px 0 90px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #eaeaea;
+    }
+    .headerLeft {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .headerInfo {
+        h3 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.75rem;
+        }
+    }
+    .headerRight {
+        display: flex;
+        gap: 1.3rem;
+        .basketPrice {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .favorite,
+        .accountInfo {
+            cursor: pointer;
+            path {
+                transition: 0.3s ease;
+            }
+            &:hover path {
+                fill: lightblue;
+            }
+        }
+        .basketPrice {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .header {
+        a > div > div {
+            display: none;
+        }
+    }
+}
